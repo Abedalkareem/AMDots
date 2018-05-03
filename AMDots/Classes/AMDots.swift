@@ -44,7 +44,6 @@ public class AMDots: UIView {
     public init(frame: CGRect, colors: [UIColor]? = nil) {
         super.init(frame: frame)
         self.colors = colors ?? defaultsColors
-        
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -52,7 +51,7 @@ public class AMDots: UIView {
         colors = defaultsColors
     }
     
-    override public init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         colors = defaultsColors
     }
@@ -67,7 +66,7 @@ public class AMDots: UIView {
         #endif
     }
     
-    func drawTheDots() {
+    private func drawTheDots() {
         
         if dotSize == 0 {
             let width = frame.size.width - (CGFloat(colors.count-1)*spacing)

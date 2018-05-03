@@ -3,9 +3,4 @@ use_frameworks!
 target 'AMDots_Example' do
   pod 'AMDots', :path => '../'
 
-  target 'AMDots_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		C64260A0209B0BF400A42156 /* CodeExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C642609F209B0BF400A42156 /* CodeExampleViewController.swift */; };
+		C692A887209B8498003DC2C2 /* StoryboardExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692A886209B8498003DC2C2 /* StoryboardExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A0AAFEA8F805C6293D0352EA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BE454233F80B00C68708C73B /* AMDots.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AMDots.podspec; path = ../AMDots.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C642609F209B0BF400A42156 /* CodeExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeExampleViewController.swift; sourceTree = "<group>"; };
+		C692A886209B8498003DC2C2 /* StoryboardExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExampleViewController.swift; sourceTree = "<group>"; };
 		CFE03434C5479B34A9C027A5 /* Pods_AMDots_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AMDots_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE57EE837E62919133EF01BB /* Pods-AMDots_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMDots_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMDots_Tests/Pods-AMDots_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				C642609F209B0BF400A42156 /* CodeExampleViewController.swift */,
+				C692A886209B8498003DC2C2 /* StoryboardExampleViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C692A887209B8498003DC2C2 /* StoryboardExampleViewController.swift in Sources */,
 				C64260A0209B0BF400A42156 /* CodeExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
