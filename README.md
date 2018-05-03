@@ -14,6 +14,8 @@ AMDots is a loading indicator with dots moving like google loading, there is thr
 
 ## Screenshots
 
+ <img src="https://raw.githubusercontent.com/Abedalkareem/AMDots/master/DotsDemo.gif"  width="350">  </center>
+
 
 ## Example
 
