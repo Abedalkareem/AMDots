@@ -1,0 +1,6 @@
+framework module AMDots {
+  umbrella header "AMDots-umbrella.h"
+
+  export *
+  module * { export * }
+}
