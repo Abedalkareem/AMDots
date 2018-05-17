@@ -154,6 +154,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = H3MRF55H66;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -369,6 +370,7 @@
 			baseConfigurationReference = 38FE4D558653B9A157F67779 /* Pods-AMDots_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = AMDots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -384,6 +386,7 @@
 			baseConfigurationReference = 1AB5D99C073F0627F8D7ED59 /* Pods-AMDots_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = AMDots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

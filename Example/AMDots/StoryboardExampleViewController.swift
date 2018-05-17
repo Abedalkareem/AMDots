@@ -24,7 +24,7 @@ class StoryboardExampleViewController: UIViewController {
         
         dotsView3.animationType = .jump
         
-        dotsView4.animationType = .shake
+        dotsView4.animationType = .blink
 
     }
 

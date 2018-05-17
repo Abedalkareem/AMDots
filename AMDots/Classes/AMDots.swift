@@ -13,6 +13,7 @@ public class AMDots: UIView {
 
     private var dotsViews = [UIView]()
     private var defaultsColors = [#colorLiteral(red: 0.2352941176, green: 0.7294117647, blue: 0.3294117647, alpha: 1),#colorLiteral(red: 0.9568627451, green: 0.7607843137, blue: 0.05098039216, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1),#colorLiteral(red: 0.2823529412, green: 0.5215686275, blue: 0.9294117647, alpha: 1)]
+    private var defaultsBlinkingColor = #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1)
     private var currentViewIndex = 0
     private var isStoped = false
     
@@ -38,22 +39,26 @@ public class AMDots: UIView {
     ///
     /// Note: you should set the colors before add the view to super view.
     public var colors = [UIColor]()
+    public var blinkingColor = UIColor()
 
     
     // MARK: - init
-    public init(frame: CGRect, colors: [UIColor]? = nil) {
+    public init(frame: CGRect, colors: [UIColor]? = nil, blinkingColor: UIColor? = nil) {
         super.init(frame: frame)
         self.colors = colors ?? defaultsColors
+        self.blinkingColor = blinkingColor ?? self.defaultsBlinkingColor
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         colors = defaultsColors
+        blinkingColor = defaultsBlinkingColor
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         colors = defaultsColors
+        blinkingColor = defaultsBlinkingColor
     }
     
     // MARK: - draw
@@ -100,6 +105,8 @@ public class AMDots: UIView {
             moveAnimation()
         case .shake:
             moveAnimation()
+        case .blink:
+            scaleAnimation()
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(animationDuration-aheadTime)) { [weak self] in
@@ -110,10 +117,17 @@ public class AMDots: UIView {
     
     private func scaleAnimation() {
         let view = subviews[currentViewIndex]
-        UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, options: [.autoreverse], animations: { [weak view] in
-            view?.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        }) { [weak view] (finished) in
-            view?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        let defualtColor = view.backgroundColor
+        UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0, animations: {
+            view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            if self.animationType == .blink {
+                view.backgroundColor = self.blinkingColor
+            }
+        }) { (finished) in
+            UIView.animate(withDuration: TimeInterval(self.animationDuration/2), animations: {
+                view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                view.backgroundColor = defualtColor
+            })
         }
     }
     
@@ -126,10 +140,12 @@ public class AMDots: UIView {
         } else {
             newFrame.origin.x -= dotSize/2
         }
-        UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, options: [.autoreverse], animations: { [weak view,newFrame] in
-            view?.frame = newFrame
-        }) { [weak view,orginalFrame] (finished) in
-            view?.frame = orginalFrame
+        UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0, animations: {
+            view.frame = newFrame
+        }) { (finished) in
+            UIView.animate(withDuration: TimeInterval(self.animationDuration/2), animations: {
+                view.frame = orginalFrame
+            })
         }
     }
  
@@ -164,5 +180,6 @@ public enum AnimationType {
     case jump
     case scale
     case shake
+    case blink
 }
 
