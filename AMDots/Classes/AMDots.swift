@@ -44,7 +44,7 @@ public class AMDots: UIView {
   private var defaultsColors = [#colorLiteral(red: 0.2352941176, green: 0.7294117647, blue: 0.3294117647, alpha: 1),#colorLiteral(red: 0.9568627451, green: 0.7607843137, blue: 0.05098039216, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1),#colorLiteral(red: 0.2823529412, green: 0.5215686275, blue: 0.9294117647, alpha: 1)]
   private var defaultsBlinkingColor = #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1)
   private var currentViewIndex = 0
-  private var isStoped = false
+  private var timer: Timer?
 
   // MARK: - init
 
@@ -73,7 +73,7 @@ public class AMDots: UIView {
     drawTheDots()
 
     #if !TARGET_INTERFACE_BUILDER
-    startAnimation()
+    start()
     #endif
   }
 
@@ -92,15 +92,11 @@ public class AMDots: UIView {
     }
   }
 
-
   // MARK: - Animation
 
-  private func startAnimation() {
+  @objc private func startAnimation() {
 
-    guard !isStoped else {
-      return
-    }
-
+    currentViewIndex += 1
     if currentViewIndex >= subviews.count {
       currentViewIndex = 0
     }
@@ -114,11 +110,6 @@ public class AMDots: UIView {
       moveAnimation()
     case .blink:
       scaleAnimation()
-    }
-
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(animationDuration-aheadTime)) { [weak self] in
-      self?.currentViewIndex+=1
-      self?.startAnimation()
     }
   }
 
@@ -161,21 +152,19 @@ public class AMDots: UIView {
   /// Use it to start the animation for the AMDots
   public func start() {
 
-    guard isStoped else {
-      return
-    }
-
     guard colors.count != 0 else {
       fatalError("There is a problem, Is the AMDot view already start? or maybe you are trying to start it before you add the AMDot view to the view controller!")
     }
     isHidden = false
-    isStoped = false
-    startAnimation()
+
+    timer = Timer.scheduledTimer(timeInterval: Double(animationDuration-aheadTime), target: self, selector: #selector(startAnimation), userInfo: nil, repeats: true)
   }
 
   /// Use it to stop the animation for the AMDots
   public func stop() {
-    isStoped = true
+    timer?.invalidate()
+    timer = nil
+
     if hidesWhenStopped {
       isHidden = true
     }
