@@ -1,5 +1,5 @@
 PODS:
-  - AMDots (0.4.0)
+  - AMDots (1.0.1)
 
 DEPENDENCIES:
   - AMDots (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AMDots: 9ac8c05b354084a2a0727942ed7cd8baafe5d516
+  AMDots: 51a64c0a31cb37934d580c22362756d5b9e88447
 
 PODFILE CHECKSUM: 3276bf272fa2dcb01ea05b8dcb5b727f8548a105
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.7.4
