@@ -114,7 +114,9 @@ public class AMDots: UIView {
   }
 
   private func scaleAnimation() {
-    guard subviews.count > 0 else { return } // add another layer of validation for empty array acces crash
+    guard subviews.count > 0 else {
+        stop() // stop timer as this still runs on the background
+        return } // add another layer of validation for empty array acces crash
     let view = subviews[currentViewIndex]
     let defualtColor = view.backgroundColor
     UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0, animations: {
@@ -131,7 +133,9 @@ public class AMDots: UIView {
   }
 
   private func moveAnimation() {
-    guard subviews.count > 0 else { return } // add another layer of validation for empty array acces crash
+    guard subviews.count > 0 else {
+        stop() // stop timer as this still runs on the background
+        return } // add another layer of validation for empty array acces crash
     let view = subviews[currentViewIndex]
     let orginalFrame = view.frame
     var newFrame = orginalFrame
