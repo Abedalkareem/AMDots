@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "AMDots_Example.app"
-               BlueprintName = "AMDots_Example"
-               ReferencedContainer = "container:AMDots.xcodeproj">
+               BuildableName = "AMDotsExample.app"
+               BlueprintName = "AMDotsExample"
+               ReferencedContainer = "container:AMDotsExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "AMDots_Tests.xctest"
                BlueprintName = "AMDots_Tests"
-               ReferencedContainer = "container:AMDots.xcodeproj">
+               ReferencedContainer = "container:AMDotsExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "AMDots_Example.app"
-            BlueprintName = "AMDots_Example"
-            ReferencedContainer = "container:AMDots.xcodeproj">
+            BuildableName = "AMDotsExample.app"
+            BlueprintName = "AMDotsExample"
+            ReferencedContainer = "container:AMDotsExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -58,7 +58,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "AMDots_Tests.xctest"
                BlueprintName = "AMDots_Tests"
-               ReferencedContainer = "container:AMDots.xcodeproj">
+               ReferencedContainer = "container:AMDotsExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "AMDots_Example.app"
-            BlueprintName = "AMDots_Example"
-            ReferencedContainer = "container:AMDots.xcodeproj">
+            BuildableName = "AMDotsExample.app"
+            BlueprintName = "AMDotsExample"
+            ReferencedContainer = "container:AMDotsExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "AMDots_Example.app"
-            BlueprintName = "AMDots_Example"
-            ReferencedContainer = "container:AMDots.xcodeproj">
+            BuildableName = "AMDotsExample.app"
+            BlueprintName = "AMDotsExample"
+            ReferencedContainer = "container:AMDotsExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

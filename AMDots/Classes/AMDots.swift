@@ -44,7 +44,7 @@ public class AMDots: UIView {
 
   // MARK: Private properties
 
-  private var defaultsColors = [#colorLiteral(red: 0.2352941176, green: 0.7294117647, blue: 0.3294117647, alpha: 1),#colorLiteral(red: 0.9568627451, green: 0.7607843137, blue: 0.05098039216, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1),#colorLiteral(red: 0.2823529412, green: 0.5215686275, blue: 0.9294117647, alpha: 1)]
+  private var defaultsColors = [#colorLiteral(red: 0.2352941176, green: 0.7294117647, blue: 0.3294117647, alpha: 1), #colorLiteral(red: 0.9568627451, green: 0.7607843137, blue: 0.05098039216, alpha: 1), #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1), #colorLiteral(red: 0.2823529412, green: 0.5215686275, blue: 0.9294117647, alpha: 1)]
   private var defaultsBlinkingColor = #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1)
   private var currentViewIndex = 0
   private var timer: Timer?
@@ -91,7 +91,7 @@ public class AMDots: UIView {
       .forEach({ index, view in
         view.layer.cornerRadius = dotSize/2
         view.frame = CGRect(x: ((spacing + dotSize) * CGFloat(index)),
-                            y: (frame.height/2) - (dotSize/2) , width: dotSize, height: dotSize)
+                            y: (frame.height/2) - (dotSize/2), width: dotSize, height: dotSize)
       })
   }
 
@@ -119,12 +119,12 @@ public class AMDots: UIView {
   private func scaleAnimation() {
     let view = subviews[currentViewIndex]
     let defualtColor = view.backgroundColor
-    UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0, animations: {
+    UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0) {
       view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
       if self.animationType == .blink {
         view.backgroundColor = self.blinkingColor
       }
-    }) { (finished) in
+    } completion: { _ in
       UIView.animate(withDuration: TimeInterval(self.animationDuration/2), animations: {
         view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         view.backgroundColor = defualtColor
@@ -141,9 +141,9 @@ public class AMDots: UIView {
     } else {
       newFrame.origin.x -= dotSize/2
     }
-    UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0, animations: {
+    UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0) {
       view.frame = newFrame
-    }) { (finished) in
+    } completion: { _ in
       UIView.animate(withDuration: TimeInterval(self.animationDuration/2), animations: {
         view.frame = orginalFrame
       })
@@ -168,7 +168,9 @@ public class AMDots: UIView {
     }
     isHidden = false
 
-    timer = Timer.scheduledTimer(timeInterval: Double(animationDuration-aheadTime), target: self, selector: #selector(startAnimation), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: Double(animationDuration-aheadTime),
+                                 target: self,
+                                 selector: #selector(startAnimation), userInfo: nil, repeats: true)
     startAnimation()
   }
 
@@ -204,5 +206,3 @@ public enum AnimationType {
   case shake
   case blink
 }
-
-

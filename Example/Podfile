@@ -1,6 +1,0 @@
-use_frameworks!
-
-target 'AMDots_Example' do
-  pod 'AMDots', :path => '../'
-
-end

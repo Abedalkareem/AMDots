@@ -7,33 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		586800E2B492A19614D0B5BD /* Pods_AMDots_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE03434C5479B34A9C027A5 /* Pods_AMDots_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		C64260A0209B0BF400A42156 /* CodeExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C642609F209B0BF400A42156 /* CodeExampleViewController.swift */; };
 		C692A887209B8498003DC2C2 /* StoryboardExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692A886209B8498003DC2C2 /* StoryboardExampleViewController.swift */; };
+		C6D2DD9226D1F31100D0014F /* AMDots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D2DD9126D1F31100D0014F /* AMDots.framework */; };
+		C6D2DD9326D1F31100D0014F /* AMDots.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6D2DD9126D1F31100D0014F /* AMDots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C6D2DD9426D1F31100D0014F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C6D2DD9326D1F31100D0014F /* AMDots.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1AB5D99C073F0627F8D7ED59 /* Pods-AMDots_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMDots_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMDots_Example/Pods-AMDots_Example.release.xcconfig"; sourceTree = "<group>"; };
-		269758BF28A180451A238883 /* Pods_AMDots_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AMDots_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38FE4D558653B9A157F67779 /* Pods-AMDots_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMDots_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AMDots_Example/Pods-AMDots_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5B7C9C3D76D13CF21BF2A1B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* AMDots_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMDots_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* AMDotsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMDotsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		91B7B5CE136A4D33F65FC06A /* Pods-AMDots_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMDots_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AMDots_Tests/Pods-AMDots_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0AAFEA8F805C6293D0352EA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BE454233F80B00C68708C73B /* AMDots.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AMDots.podspec; path = ../AMDots.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C642609F209B0BF400A42156 /* CodeExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeExampleViewController.swift; sourceTree = "<group>"; };
 		C692A886209B8498003DC2C2 /* StoryboardExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExampleViewController.swift; sourceTree = "<group>"; };
-		CFE03434C5479B34A9C027A5 /* Pods_AMDots_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AMDots_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE57EE837E62919133EF01BB /* Pods-AMDots_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMDots_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMDots_Tests/Pods-AMDots_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C6D2DD9126D1F31100D0014F /* AMDots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AMDots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				586800E2B492A19614D0B5BD /* Pods_AMDots_Example.framework in Frameworks */,
+				C6D2DD9226D1F31100D0014F /* AMDots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,22 +62,21 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for AMDots */,
+				607FACD21AFB9204008FA782 /* AMDotsExample */,
 				607FACD11AFB9204008FA782 /* Products */,
-				9A5610976FED46D75216147A /* Pods */,
-				C967DC0810E877F8963CEDD2 /* Frameworks */,
+				C6D2DD9026D1F31000D0014F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* AMDots_Example.app */,
+				607FACD01AFB9204008FA782 /* AMDotsExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for AMDots */ = {
+		607FACD21AFB9204008FA782 /* AMDotsExample */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -78,7 +87,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for AMDots";
+			name = AMDotsExample;
 			path = AMDots;
 			sourceTree = "<group>";
 		};
@@ -100,22 +109,10 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9A5610976FED46D75216147A /* Pods */ = {
+		C6D2DD9026D1F31000D0014F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38FE4D558653B9A157F67779 /* Pods-AMDots_Example.debug.xcconfig */,
-				1AB5D99C073F0627F8D7ED59 /* Pods-AMDots_Example.release.xcconfig */,
-				91B7B5CE136A4D33F65FC06A /* Pods-AMDots_Tests.debug.xcconfig */,
-				DE57EE837E62919133EF01BB /* Pods-AMDots_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C967DC0810E877F8963CEDD2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CFE03434C5479B34A9C027A5 /* Pods_AMDots_Example.framework */,
-				269758BF28A180451A238883 /* Pods_AMDots_Tests.framework */,
+				C6D2DD9126D1F31100D0014F /* AMDots.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,23 +120,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* AMDots_Example */ = {
+		607FACCF1AFB9204008FA782 /* AMDotsExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "AMDots_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "AMDotsExample" */;
 			buildPhases = (
-				6865129709D4515DEF27159D /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				EFB77BA2C0A87819932107A1 /* [CP] Embed Pods Frameworks */,
+				C6D2DD9426D1F31100D0014F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AMDots_Example;
+			name = AMDotsExample;
 			productName = AMDots;
-			productReference = 607FACD01AFB9204008FA782 /* AMDots_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* AMDotsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +155,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "AMDots" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "AMDotsExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* AMDots_Example */,
+				607FACCF1AFB9204008FA782 /* AMDotsExample */,
 			);
 		};
 /* End PBXProject section */
@@ -189,45 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6865129709D4515DEF27159D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AMDots_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EFB77BA2C0A87819932107A1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AMDots_Example/Pods-AMDots_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AMDots/AMDots.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMDots.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AMDots_Example/Pods-AMDots_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -311,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -361,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -371,11 +328,11 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38FE4D558653B9A157F67779 /* Pods-AMDots_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = AMDots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -386,11 +343,11 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AB5D99C073F0627F8D7ED59 /* Pods-AMDots_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = AMDots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -402,7 +359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "AMDots" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "AMDotsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -411,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "AMDots_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "AMDotsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
