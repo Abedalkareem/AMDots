@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AMDots'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'AMDots is a loading indicator for iOS.'
 
 # This description is used to generate tags and improve search results.
@@ -27,9 +27,9 @@ AMDots is a loading indicator with dots moving like google loading, there is thr
   s.author           = { 'Abedalkareem' => 'abedalkareem.omreyh@yahoo.com' }
   s.source           = { :git => 'https://github.com/Abedalkareem/AMDots.git', :tag => s.version.to_s }
   s.swift_version = '5.0'
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+   s.social_media_url = 'https://twitter.com/abedalkareemomr'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'AMDots/Classes/**/*'
   
