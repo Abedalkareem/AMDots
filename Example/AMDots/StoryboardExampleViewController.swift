@@ -6,15 +6,15 @@
 //  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
-import UIKit
 import AMDots
+import UIKit
 
 class StoryboardExampleViewController: UIViewController {
 
-  @IBOutlet weak var dotsView1: AMDots!
-  @IBOutlet weak var dotsView2: AMDots!
-  @IBOutlet weak var dotsView3: AMDots!
-  @IBOutlet weak var dotsView4: AMDots!
+  @IBOutlet private weak var dotsView1: AMDots!
+  @IBOutlet private weak var dotsView2: AMDots!
+  @IBOutlet private weak var dotsView3: AMDots!
+  @IBOutlet private weak var dotsView4: AMDots!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,7 +23,7 @@ class StoryboardExampleViewController: UIViewController {
     dotsView1.start()
 
     dotsView2.animationType = .blink
-    dotsView2.colors =  [#colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1), #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1), #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1), #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1)]
+    dotsView2.colors = [#colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1), #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1), #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1), #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.8156862745, alpha: 1)]
     dotsView2.blinkingColor = #colorLiteral(red: 0.9137254902, green: 0.1176470588, blue: 0.3882352941, alpha: 1)
     dotsView2.start()
 

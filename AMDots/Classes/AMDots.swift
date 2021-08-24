@@ -84,20 +84,21 @@ public class AMDots: UIView {
   }
 
   private func updateDotsSizes() {
-    let width = frame.size.width - (CGFloat(colors.count-1)*spacing)
+    let width = frame.size.width - (CGFloat(colors.count - 1) * spacing)
     dotSize = dotSize == 0 ? (width / CGFloat(colors.count)) : dotSize
 
     subviews.enumerated()
       .forEach({ index, view in
-        view.layer.cornerRadius = dotSize/2
+        view.layer.cornerRadius = dotSize / 2
         view.frame = CGRect(x: ((spacing + dotSize) * CGFloat(index)),
-                            y: (frame.height/2) - (dotSize/2), width: dotSize, height: dotSize)
+                            y: (frame.height / 2) - (dotSize / 2), width: dotSize, height: dotSize)
       })
   }
 
   // MARK: Animation
 
-  @objc private func startAnimation() {
+  @objc
+  private func startAnimation() {
 
     currentViewIndex += 1
     if currentViewIndex >= subviews.count {
@@ -119,13 +120,13 @@ public class AMDots: UIView {
   private func scaleAnimation() {
     let view = subviews[currentViewIndex]
     let defualtColor = view.backgroundColor
-    UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0) {
+    UIView.animate(withDuration: TimeInterval(animationDuration / 2), delay: 0.0) {
       view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
       if self.animationType == .blink {
         view.backgroundColor = self.blinkingColor
       }
     } completion: { _ in
-      UIView.animate(withDuration: TimeInterval(self.animationDuration/2), animations: {
+      UIView.animate(withDuration: TimeInterval(self.animationDuration / 2), animations: {
         view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         view.backgroundColor = defualtColor
       })
@@ -137,14 +138,14 @@ public class AMDots: UIView {
     let orginalFrame = view.frame
     var newFrame = orginalFrame
     if animationType == .jump {
-      newFrame.origin.y += dotSize/2
+      newFrame.origin.y += dotSize / 2
     } else {
-      newFrame.origin.x -= dotSize/2
+      newFrame.origin.x -= dotSize / 2
     }
-    UIView.animate(withDuration: TimeInterval(animationDuration/2), delay: 0.0) {
+    UIView.animate(withDuration: TimeInterval(animationDuration / 2), delay: 0.0) {
       view.frame = newFrame
     } completion: { _ in
-      UIView.animate(withDuration: TimeInterval(self.animationDuration/2), animations: {
+      UIView.animate(withDuration: TimeInterval(self.animationDuration / 2), animations: {
         view.frame = orginalFrame
       })
     }
@@ -162,13 +163,13 @@ public class AMDots: UIView {
   /// Use it to start the animation for the AMDots.
   public func start() {
 
-    guard colors.count != 0 else {
+    guard !colors.isEmpty else {
       assertionFailure("Before starting the animation, make sure that the colors array is not empty")
       return
     }
     isHidden = false
 
-    timer = Timer.scheduledTimer(timeInterval: Double(animationDuration-aheadTime),
+    timer = Timer.scheduledTimer(timeInterval: Double(animationDuration - aheadTime),
                                  target: self,
                                  selector: #selector(startAnimation), userInfo: nil, repeats: true)
     startAnimation()

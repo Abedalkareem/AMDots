@@ -6,8 +6,8 @@
 //  Copyright © 2018 abedalkareem omreyh. All rights reserved.
 //
 
-import UIKit
 import AMDots
+import UIKit
 
 class CodeExampleViewController: UIViewController {
 
