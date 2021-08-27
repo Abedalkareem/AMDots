@@ -8,7 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/AMDots.svg?style=flat)](https://cocoapods.org/pods/AMDots)
 
 <br>
-AMDots is a loading indicator with dots moving like google loading, there are three types of the loading, scale, jump, and shake, each one of them gives you a cool loading to show. 
+AMDots is a loading indicator with dots moving like google loading, there are three types of the loading, scale, jump, and shake. 
 <br>
 <br>
 
@@ -24,13 +24,13 @@ AMDots is a loading indicator with dots moving like google loading, there are th
 ```swift
 class CodeExampleViewController: UIViewController {
 
-  private var dotsView: AMDots!
+  private var dotsView: AMDotsView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    dotsView = AMDots(frame: CGRect(x: 20, y: 20, width: 150, height: 70),
-                      colors: [.red, .blue, .yellow, .green])
+    dotsView = AMDotsView(frame: CGRect(x: 20, y: 20, width: 150, height: 70),
+                          colors: [.red, .blue, .yellow, .green])
     dotsView.backgroundColor = UIColor.white
     dotsView.animationType = .scale
     view.addSubview(dotsView)
@@ -45,7 +45,7 @@ class CodeExampleViewController: UIViewController {
 ```swift
 class StoryboardExampleViewController: UIViewController {
 
-  @IBOutlet weak var dotsView1: AMDots!
+  @IBOutlet weak var dotsView1: AMDotsView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
