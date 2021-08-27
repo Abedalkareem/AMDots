@@ -10,7 +10,7 @@
 		C640EB8626D1EB8B00BABA29 /* AMDots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C640EB7C26D1EB8B00BABA29 /* AMDots.framework */; };
 		C640EB8B26D1EB8B00BABA29 /* AMDotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640EB8A26D1EB8B00BABA29 /* AMDotsTests.swift */; };
 		C640EB8D26D1EB8B00BABA29 /* AMDots.h in Headers */ = {isa = PBXBuildFile; fileRef = C640EB7F26D1EB8B00BABA29 /* AMDots.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C640EB9826D1EBAF00BABA29 /* AMDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640EB9626D1EBAF00BABA29 /* AMDots.swift */; };
+		C640EB9826D1EBAF00BABA29 /* AMDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640EB9626D1EBAF00BABA29 /* AMDotsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 		C640EB8526D1EB8B00BABA29 /* AMDotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMDotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C640EB8A26D1EB8B00BABA29 /* AMDotsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMDotsTests.swift; sourceTree = "<group>"; };
 		C640EB8C26D1EB8B00BABA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C640EB9626D1EBAF00BABA29 /* AMDots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMDots.swift; sourceTree = "<group>"; };
+		C640EB9626D1EBAF00BABA29 /* AMDotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMDotsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		C640EB9426D1EBAF00BABA29 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C640EB9626D1EBAF00BABA29 /* AMDots.swift */,
+				C640EB9626D1EBAF00BABA29 /* AMDotsView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C640EB9826D1EBAF00BABA29 /* AMDots.swift in Sources */,
+				C640EB9826D1EBAF00BABA29 /* AMDotsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

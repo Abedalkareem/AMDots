@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aay-cT-OAx">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aay-cT-OAx">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amdots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="CSF-dB-2Ue">
-                                <rect key="frame" x="62.5" y="70" width="250" height="100"/>
+                                <rect key="frame" x="62.5" y="50" width="250" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="FJE-gQ-JTm"/>
                                     <constraint firstAttribute="height" constant="100" id="e1S-Wu-bvv"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctE-Ax-Rg7">
-                                <rect key="frame" x="62" y="190" width="251" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctE-Ax-Rg7">
+                                <rect key="frame" x="62" y="170" width="251" height="50"/>
                                 <color key="backgroundColor" red="0.28235294117647058" green="0.52156862745098043" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QaX-WK-08X"/>
@@ -42,8 +40,8 @@
                                     <segue destination="vXZ-lx-hvc" kind="presentation" id="oaQ-VM-16R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axn-nI-CiQ">
-                                <rect key="frame" x="62" y="264" width="251" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axn-nI-CiQ">
+                                <rect key="frame" x="62" y="244" width="251" height="50"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.52156862749999999" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ag4-A0-nYL"/>
@@ -77,13 +75,13 @@
         <!--Code Example View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="CodeExampleViewController" customModule="AMDots_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CodeExampleViewController" customModule="AMDotsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -95,41 +93,41 @@
         <!--Storyboard Example View Controller-->
         <scene sceneID="Oqt-Jy-YlZ">
             <objects>
-                <viewController id="MJQ-fk-IS3" customClass="StoryboardExampleViewController" customModule="AMDots_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MJQ-fk-IS3" customClass="StoryboardExampleViewController" customModule="AMDotsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x0w-ae-v3w"/>
                         <viewControllerLayoutGuide type="bottom" id="sdE-Oc-OlZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GKL-Wj-k6M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-Ss-Feh" customClass="AMDots" customModule="AMDots">
-                                <rect key="frame" x="127.5" y="313.5" width="120" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-Ss-Feh" customClass="AMDotsView" customModule="AMDots">
+                                <rect key="frame" x="127.5" y="303.5" width="120" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MLU-IU-Dxf"/>
                                     <constraint firstAttribute="width" constant="120" id="nOR-sW-ums"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKX-Pa-dMN" customClass="AMDots" customModule="AMDots">
-                                <rect key="frame" x="127.5" y="222" width="120" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKX-Pa-dMN" customClass="AMDotsView" customModule="AMDots">
+                                <rect key="frame" x="127.5" y="212" width="120" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GkS-l2-f24"/>
                                     <constraint firstAttribute="width" constant="120" id="law-Zg-6pg"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SR-9d-YPC" customClass="AMDots" customModule="AMDots">
-                                <rect key="frame" x="127.5" y="403.5" width="120" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SR-9d-YPC" customClass="AMDotsView" customModule="AMDots">
+                                <rect key="frame" x="127.5" y="393.5" width="120" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="wgb-Yi-daR"/>
                                     <constraint firstAttribute="height" constant="40" id="ytg-pq-pHI"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEe-wR-yc4" customClass="AMDots" customModule="AMDots">
-                                <rect key="frame" x="127.5" y="493.5" width="120" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEe-wR-yc4" customClass="AMDotsView" customModule="AMDots">
+                                <rect key="frame" x="127.5" y="483.5" width="120" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="hgo-0c-Uzy"/>
@@ -137,7 +135,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amdots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="K02-60-osM">
-                                <rect key="frame" x="62.5" y="60" width="250" height="100"/>
+                                <rect key="frame" x="62.5" y="40" width="250" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="hVB-Ks-cwQ"/>
                                     <constraint firstAttribute="height" constant="100" id="uaL-QA-7ns"/>

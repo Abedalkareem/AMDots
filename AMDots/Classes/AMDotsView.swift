@@ -1,5 +1,5 @@
 //
-//  AMDots.swift
+//  AMDotsView.swift
 //  AMDots
 //
 //  Created by abedalkareem omreyh on 5/1/18.
@@ -9,23 +9,23 @@
 import UIKit
 
 @IBDesignable
-public class AMDots: UIView {
+public class AMDotsView: UIView {
 
   // MARK: - Properties
 
   /// Size of the dot, the default is calculated from the view `width`,
-  /// E.g: if you have `4` dots and the view width is `400`, each one will be `(400/4) - (4*spacing)`
+  /// E.g: if you have `4` dots and the view width is `400`, each one will be `(400 / 4) - (4 * spacing)`
   @IBInspectable public var dotSize: CGFloat = 0
   /// Space between each dot, the default is `10`
   @IBInspectable public var spacing: CGFloat = 10
   /// Animation duration for each dot, it should be more than `0.1`, the default is `0.4`
   @IBInspectable public var animationDuration: CGFloat = 0.4
 
-  /// The negative time you need the animation to run before the prevuse animation finish for each dot
-  /// (If you set it for 0.2, the next animation will run before 0.2 second before the current animation finish).
+  /// The negative time you need the animation to run before the previous animation finish.
+  /// (If you set it for 0.2, the next animation will run 0.2 seconds before the current dot animation finish).
   /// the default value is `0.2`.
   @IBInspectable public var aheadTime: CGFloat = 0.2
-  /// A Boolean value that controls whether the must be hidden when the animation is stopped.
+  /// A Boolean value that controls whether the view should be hidden when the animation stop.
   @IBInspectable public var hidesWhenStopped: Bool = true
 
   /// The circles `color`, the number of dots will be the same as the number of colors,
@@ -44,8 +44,8 @@ public class AMDots: UIView {
 
   // MARK: Private properties
 
-  private var defaultsColors = [#colorLiteral(red: 0.2352941176, green: 0.7294117647, blue: 0.3294117647, alpha: 1), #colorLiteral(red: 0.9568627451, green: 0.7607843137, blue: 0.05098039216, alpha: 1), #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1), #colorLiteral(red: 0.2823529412, green: 0.5215686275, blue: 0.9294117647, alpha: 1)]
-  private var defaultsBlinkingColor = #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1)
+  private var defaultColors = [#colorLiteral(red: 0.2352941176, green: 0.7294117647, blue: 0.3294117647, alpha: 1), #colorLiteral(red: 0.9568627451, green: 0.7607843137, blue: 0.05098039216, alpha: 1), #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1), #colorLiteral(red: 0.2823529412, green: 0.5215686275, blue: 0.9294117647, alpha: 1)]
+  private var defaultBlinkingColor = #colorLiteral(red: 0.8588235294, green: 0.1960784314, blue: 0.2117647059, alpha: 1)
   private var currentViewIndex = 0
   private var timer: Timer?
 
@@ -53,22 +53,22 @@ public class AMDots: UIView {
 
   public init(frame: CGRect, colors: [UIColor]? = nil, blinkingColor: UIColor? = nil) {
     super.init(frame: frame)
-    self.colors = colors ?? defaultsColors
-    self.blinkingColor = blinkingColor ?? self.defaultsBlinkingColor
+    self.colors = colors ?? defaultColors
+    self.blinkingColor = blinkingColor ?? self.defaultBlinkingColor
     setup()
   }
 
   required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    colors = defaultsColors
-    blinkingColor = defaultsBlinkingColor
+    colors = defaultColors
+    blinkingColor = defaultBlinkingColor
     setup()
   }
 
   public override init(frame: CGRect) {
     super.init(frame: frame)
-    colors = defaultsColors
-    blinkingColor = defaultsBlinkingColor
+    colors = defaultColors
+    blinkingColor = defaultBlinkingColor
     setup()
   }
 

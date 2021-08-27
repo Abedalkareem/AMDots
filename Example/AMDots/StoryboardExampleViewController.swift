@@ -11,10 +11,10 @@ import UIKit
 
 class StoryboardExampleViewController: UIViewController {
 
-  @IBOutlet private weak var dotsView1: AMDots!
-  @IBOutlet private weak var dotsView2: AMDots!
-  @IBOutlet private weak var dotsView3: AMDots!
-  @IBOutlet private weak var dotsView4: AMDots!
+  @IBOutlet private weak var dotsView1: AMDotsView!
+  @IBOutlet private weak var dotsView2: AMDotsView!
+  @IBOutlet private weak var dotsView3: AMDotsView!
+  @IBOutlet private weak var dotsView4: AMDotsView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
